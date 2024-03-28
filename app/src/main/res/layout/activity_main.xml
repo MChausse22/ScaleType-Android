@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/dividerNav"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgBtnLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="imgBtnOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnMedium"
+        app:layout_constraintTop_toTopOf="@+id/dividerNav"
+        app:srcCompat="@drawable/img_grande" />
+
+    <ImageButton
+        android:id="@+id/imgBtnShort"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="imgBtnOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerNav"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnMedium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dividerNav"
+        app:srcCompat="@drawable/img_pequeno" />
+
+    <ImageButton
+        android:id="@+id/imgBtnMedium"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="imgBtnOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerNav"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnLarge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnShort"
+        app:layout_constraintTop_toTopOf="@+id/dividerNav"
+        app:srcCompat="@drawable/img_medio" />
+
+    <Switch
+        android:id="@+id/swtVertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:switchMinWidth="80dp"
+        android:text="@string/switchVert"
+        app:layout_constraintEnd_toEndOf="@+id/dividerImg"
+        app:layout_constraintStart_toStartOf="@+id/dividerImg"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNav" />
+
+    <View
+        android:id="@+id/dividerImg"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNav"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <ImageView
+        android:id="@+id/imgTeste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="imgBtnOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerImg"
+        app:layout_constraintEnd_toEndOf="@+id/dividerImg"
+        app:layout_constraintStart_toStartOf="@+id/dividerImg"
+        app:layout_constraintTop_toTopOf="@+id/dividerImg"
+        app:srcCompat="@drawable/android120x120" />
+
+    <Switch
+        android:id="@+id/swtBackground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:onClick="swtBackgrounOnClick"
+        android:showText="false"
+        android:switchMinWidth="80dp"
+        android:text="@string/switchBackground"
+        app:layout_constraintEnd_toEndOf="@+id/dividerImg"
+        app:layout_constraintStart_toStartOf="@+id/dividerImg"
+        app:layout_constraintTop_toBottomOf="@+id/dividerImg"
+        tools:checked="true" />
+
+    <TextView
+        android:id="@+id/txtScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/scaleType"
+        app:layout_constraintStart_toStartOf="@+id/dividerImg"
+        app:layout_constraintTop_toBottomOf="@+id/swtBackground" />
+
+    <Spinner
+        android:id="@+id/spinnerScaleType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerScaleType"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dividerImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dividerImg"
+        app:layout_constraintTop_toBottomOf="@+id/txtScale"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnApplyOnClick"
+        android:text="@string/btnApply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerScaleType"
+        app:layout_constraintVertical_bias="0.37" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TrabalhandoComImagens</string>
+    <string name="switchVert">Imagem Vertical</string>
+    <string name="switchBackground">Exibir fundo da ViewPort</string>
+    <string name="scaleType">Scale Type</string>
+    <string name="btnApply">Aplicar</string>
+    <string-array name="spinnerScaleType">
+        <item>centerInside</item>
+        <item>centerCrop</item>
+        <item>center</item>
+        <item>fitCenter</item>
+        <item>fitStart</item>
+        <item>fitEnd</item>
+        <item>fitXY</item>
+    </string-array>
+</resources>
